@@ -40,12 +40,12 @@ const hospital = {
 
 function showPatient(hospital) {
     let output = "<h1>" + hospital.name + "</h1>";
-    for (let i = 0; i < hospital.patients.lenght; i++) {
+    for (let i = 0; i < hospital.patients.length; i++) {
         let patient = hospital.patients[i];
         output += "<h2>" + patient.name + "," + patient.dateOfBirth + "</h2>";
         output += "<ul>";
 
-        for (let j = 0; j < patient.symptoms.lenght; j++) {
+        for (let j = 0; j < patient.symptoms.length; j++) {
             output += "<li>" + patient.symptoms[j] + "</li>";
 
         }
@@ -55,8 +55,6 @@ function showPatient(hospital) {
 }
 
 console.log(showPatient(hospital));
-document.body.innerHTML = showPatient(hospital);
-
 
 function getPatient(patients) {
     let random = Math.floor(Math.random() * patients.length);
